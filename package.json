@@ -1,0 +1,12 @@
+{
+  "name": "frontendmentor-single-price-grid-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/style.scss styles/style.css",
+    "watch-sass": "sass -w styles/style.scss styles/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,85 @@
+//Pixels to rem
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem; 
+  @return $remValue;
+}
+
+//Colors
+$cyanColor: hsl(179, 62%, 43%);
+$whiteTextColor: hsl(204, 43%, 93%);
+$grayTextColor: hsl(218, 22%, 67%);
+$yellowColor: hsl(71, 73%, 54%);
+
+//Fonts
+$base-font-size: toRem(16);
+$font-primary: 'Karla', sans-serif;
+$weight-normal: 400;
+$weight-bold: 700;
+
+//Radius
+$radius: toRem(16);
+
+//Breakpoint
+$desktopLayout: toRem(375);
+
+
+/* global styles */
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  font-size: $base-font-size; 
+  padding: toRem(2);
+}
+
+/*typography*/
+
+h1 {
+  color: $cyanColor;
+}
+
+.freeTrial h2 {
+  color:$yellowColor;
+}
+
+.ourOffer h2 {
+  color: $grayTextColor;
+}
+
+/*layout*/
+.isResponsive {
+  display: flex;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: toRem(1000);
+  width: 100%;
+  border-radius: $radius;
+  box-shadow: toRem(0.5) toRem(0.5) toRem(5) $cyanColor;
+  flex-direction: column;
+}
+
+.ourOffer {
+  background-color: $cyanColor;
+}
+
+.reason ul li {
+  list-style: none;
+  color:$grayTextColor;
+}
