@@ -6,12 +6,15 @@
 
 //Colors
 $cyanColor: hsl(179, 62%, 43%);
+$lightCyanColor: hsl(179, 57%, 58%);
+$boxShadowCyanColor: hsl(179, 60%, 33%);;
 $whiteTextColor: hsl(204, 43%, 93%);
 $grayTextColor: hsl(218, 22%, 67%);
+$lightGrayTextColor: hsl(218, 22%, 67%);
 $yellowColor: hsl(71, 73%, 54%);
 
 //Fonts
-$base-font-size: toRem(16);
+$base-font-size: 16px;
 $font-primary: 'Karla', sans-serif;
 $weight-normal: 400;
 $weight-bold: 700;
@@ -42,21 +45,24 @@ body {
   font-weight: $weight-normal;
   line-height: 1.5;
   font-size: $base-font-size; 
-  padding: toRem(2);
+  padding: toRem(32);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*typography*/
 
 h1 {
   color: $cyanColor;
-}
-
-.freeTrial h2 {
-  color:$yellowColor;
-}
-
-.ourOffer h2 {
-  color: $grayTextColor;
 }
 
 /*layout*/
@@ -68,18 +74,93 @@ h1 {
 }
 
 .container {
-  max-width: toRem(1000);
+  max-width: toRem(800);
   width: 100%;
   border-radius: $radius;
-  box-shadow: toRem(0.5) toRem(0.5) toRem(5) $cyanColor;
   flex-direction: column;
+}
+
+.freeTrial {
+  padding: toRem(32);
+  border: $lightCyanColor solid toRem(0.5);
+  border-radius: $radius $radius 0 0;
+  h2 {
+    margin: 0;
+    color:$yellowColor;
+    font-weight: $weight-bold;
+  }
+  p {
+    color: $grayTextColor;
+  }
 }
 
 .ourOffer {
   background-color: $cyanColor;
-}
-
-.reason ul li {
-  list-style: none;
-  color:$grayTextColor;
+  justify-content: space-between;
+  border-radius: 0 0 $radius $radius;
+  max-width: toRem(800);
+  width:100%;
+  div {
+    max-width: toRem(400);
+    width: 50%;
+    padding: toRem(48);
+  }
+  h2 {
+    color: $whiteTextColor;
+    font-weight: $weight-bold;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: $whiteTextColor;
+    align-items: center;
+    font-size: $base-font-size*1.1;
+  }
+  .price {
+    font-weight: $weight-bold;
+    font-size: $base-font-size*2;
+    padding: 0 toRem(16) 0 0;
+  }
+  .period {
+    text-align: center;
+    font-size: $base-font-size*1.5;
+    color: $lightGrayTextColor;
+  }
+  .signUpButton {
+    text-align: center;
+    background-color: $yellowColor;
+    width: 100%;
+    padding: toRem(8) 0;
+    border-radius: toRem(8);
+    a {
+      text-decoration: none;
+      color: $whiteTextColor;
+    }
+    &:hover,
+    &:focus-visible{
+      box-shadow: toRem(8) toRem(8) toRem(15) $boxShadowCyanColor,
+                  toRem(-8) toRem(8) toRem(8) $boxShadowCyanColor;
+  }
+  }
+  .subscription {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .reason {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $lightCyanColor;
+    border-bottom-right-radius: $radius;
+    overflow: hidden;
+    ul {
+      padding: toRem(16) 0 0 0;
+      margin: 0;
+    }
+    ul li {
+      list-style: none;
+      color: $whiteTextColor;
+    }
+  }
 }

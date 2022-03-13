@@ -16,21 +16,24 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 1rem;
-  padding: 0.125rem;
+  font-size: 16px;
+  padding: 2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*typography*/
 h1 {
   color: #2ab2af;
-}
-
-.freeTrial h2 {
-  color: #c0df34;
-}
-
-.ourOffer h2 {
-  color: #98a6bd;
 }
 
 /*layout*/
@@ -42,20 +45,93 @@ h1 {
 }
 
 .container {
-  max-width: 62.5rem;
+  max-width: 50rem;
   width: 100%;
   border-radius: 1rem;
-  box-shadow: 0.03125rem 0.03125rem 0.3125rem #2ab2af;
   flex-direction: column;
+}
+
+.freeTrial {
+  padding: 2rem;
+  border: #57d1cf solid 0.03125rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.freeTrial h2 {
+  margin: 0;
+  color: #c0df34;
+  font-weight: 700;
+}
+.freeTrial p {
+  color: #98a6bd;
 }
 
 .ourOffer {
   background-color: #2ab2af;
+  justify-content: space-between;
+  border-radius: 0 0 1rem 1rem;
+  max-width: 50rem;
+  width: 100%;
 }
-
-.reason ul li {
-  list-style: none;
+.ourOffer div {
+  max-width: 25rem;
+  width: 50%;
+  padding: 3rem;
+}
+.ourOffer h2 {
+  color: #e5eff5;
+  font-weight: 700;
+  margin: 0;
+}
+.ourOffer p {
+  margin: 0;
+  color: #e5eff5;
+  align-items: center;
+  font-size: 17.6px;
+}
+.ourOffer .price {
+  font-weight: 700;
+  font-size: 32px;
+  padding: 0 1rem 0 0;
+}
+.ourOffer .period {
+  text-align: center;
+  font-size: 24px;
   color: #98a6bd;
+}
+.ourOffer .signUpButton {
+  text-align: center;
+  background-color: #c0df34;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+.ourOffer .signUpButton a {
+  text-decoration: none;
+  color: #e5eff5;
+}
+.ourOffer .signUpButton:hover, .ourOffer .signUpButton:focus-visible {
+  box-shadow: 0.5rem 0.5rem 0.9375rem #228785, -0.5rem 0.5rem 0.5rem #228785;
+}
+.ourOffer .subscription {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.ourOffer .reason {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #57d1cf;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+.ourOffer .reason ul {
+  padding: 1rem 0 0 0;
+  margin: 0;
+}
+.ourOffer .reason ul li {
+  list-style: none;
+  color: #e5eff5;
 }
 
 /*# sourceMappingURL=style.css.map */
