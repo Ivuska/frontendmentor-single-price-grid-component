@@ -9,7 +9,7 @@ $cyanColor: hsl(179, 62%, 43%);
 $lightCyanColor: hsl(179, 57%, 58%);
 $boxShadowCyanColor: hsl(179, 60%, 33%);;
 $whiteTextColor: hsl(204, 43%, 93%);
-$grayTextColor: hsl(218, 22%, 67%);
+$grayTextColor: #63676c;
 $lightGrayTextColor: hsl(218, 22%, 67%);
 $yellowColor: hsl(71, 73%, 54%);
 
@@ -116,8 +116,6 @@ h1 {
   width:100%;
   
   div {
-    max-width: toRem(450);
-    width: 50%;
     padding: toRem(24);
   }
   h2 {
