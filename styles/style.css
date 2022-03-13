@@ -45,12 +45,18 @@ h1 {
 }
 
 .container {
-  max-width: 50rem;
+  max-width: 23.4375rem;
   width: 100%;
   border-radius: 1rem;
+  overflow: hidden;
   flex-direction: column;
 }
 
+@media only screen and (min-width: 23.4375rem) {
+  .container {
+    max-width: 56.25rem;
+  }
+}
 .freeTrial {
   padding: 2rem;
   border: #57d1cf solid 0.03125rem;
@@ -65,17 +71,23 @@ h1 {
   color: #98a6bd;
 }
 
+@media only screen and (min-width: 23.4375rem) {
+  .freeTrial {
+    padding: 3rem;
+  }
+}
 .ourOffer {
   background-color: #2ab2af;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: stretch;
   border-radius: 0 0 1rem 1rem;
-  max-width: 50rem;
+  max-width: 23.4375rem;
   width: 100%;
 }
 .ourOffer div {
-  max-width: 25rem;
+  max-width: 28.125rem;
   width: 50%;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 .ourOffer h2 {
   color: #e5eff5;
@@ -103,6 +115,7 @@ h1 {
   background-color: #c0df34;
   width: 100%;
   padding: 0.5rem 0;
+  margin-top: 2rem;
   border-radius: 0.5rem;
 }
 .ourOffer .signUpButton a {
@@ -122,8 +135,6 @@ h1 {
   justify-content: space-between;
   width: 100%;
   background-color: #57d1cf;
-  border-bottom-right-radius: 1rem;
-  overflow: hidden;
 }
 .ourOffer .reason ul {
   padding: 1rem 0 0 0;
@@ -132,6 +143,20 @@ h1 {
 .ourOffer .reason ul li {
   list-style: none;
   color: #e5eff5;
+}
+
+@media only screen and (min-width: 23.4375rem) {
+  .ourOffer {
+    max-width: 56.25rem;
+    flex-direction: row;
+    border-radius: 0;
+  }
+  .ourOffer div {
+    padding: 3rem;
+  }
+  .ourOffer .signUpButton {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

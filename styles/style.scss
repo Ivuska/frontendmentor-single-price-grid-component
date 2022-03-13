@@ -74,10 +74,17 @@ h1 {
 }
 
 .container {
-  max-width: toRem(800);
+  max-width: toRem(375);
   width: 100%;
   border-radius: $radius;
+  overflow: hidden;
   flex-direction: column;
+}
+
+@media only screen and (min-width: $desktopLayout) {
+  .container {
+    max-width: toRem(900);
+  }
 }
 
 .freeTrial {
@@ -94,16 +101,24 @@ h1 {
   }
 }
 
+@media only screen and (min-width: $desktopLayout) {
+  .freeTrial {
+    padding: toRem(48);
+  }
+}
+
 .ourOffer {
   background-color: $cyanColor;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: stretch;
   border-radius: 0 0 $radius $radius;
-  max-width: toRem(800);
+  max-width: toRem(375);
   width:100%;
+  
   div {
-    max-width: toRem(400);
+    max-width: toRem(450);
     width: 50%;
-    padding: toRem(48);
+    padding: toRem(24);
   }
   h2 {
     color: $whiteTextColor;
@@ -131,6 +146,7 @@ h1 {
     background-color: $yellowColor;
     width: 100%;
     padding: toRem(8) 0;
+    margin-top: toRem(32);
     border-radius: toRem(8);
     a {
       text-decoration: none;
@@ -140,7 +156,7 @@ h1 {
     &:focus-visible{
       box-shadow: toRem(8) toRem(8) toRem(15) $boxShadowCyanColor,
                   toRem(-8) toRem(8) toRem(8) $boxShadowCyanColor;
-  }
+    }
   }
   .subscription {
     flex-direction: column;
@@ -152,8 +168,6 @@ h1 {
     justify-content: space-between;
     width: 100%;
     background-color: $lightCyanColor;
-    border-bottom-right-radius: $radius;
-    overflow: hidden;
     ul {
       padding: toRem(16) 0 0 0;
       margin: 0;
@@ -164,3 +178,17 @@ h1 {
     }
   }
 }
+
+@media only screen and (min-width: $desktopLayout) {
+  .ourOffer {
+    max-width: toRem(900);
+    flex-direction: row;
+    border-radius: 0;
+    div {
+      padding: toRem(48);
+    }
+    .signUpButton {
+      margin-top: 0;
+    }
+  }
+}  
