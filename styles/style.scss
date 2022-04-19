@@ -37,9 +37,6 @@ html {
 
 body {
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   font-family: $font-primary;
   font-weight: $weight-normal;
@@ -78,7 +75,7 @@ h1 {
   width: 100%;
   border-radius: $radius;
   overflow: hidden;
-  flex-direction: column;
+  margin: auto;
 }
 
 @media only screen and (min-width: $desktopLayout) {
@@ -109,8 +106,8 @@ h1 {
 
 .ourOffer {
   background-color: $cyanColor;
-  flex-direction: column;
-  justify-content: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-radius: 0 0 $radius $radius;
   max-width: toRem(375);
   width:100%;

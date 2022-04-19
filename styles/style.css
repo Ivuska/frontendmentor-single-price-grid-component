@@ -9,9 +9,6 @@ html {
 
 body {
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   font-family: "Karla", sans-serif;
   font-weight: 400;
@@ -33,7 +30,7 @@ body {
 
 /*typography*/
 h1 {
-  color: #2ab2af;
+  color: hsl(179deg, 62%, 43%);
 }
 
 /*layout*/
@@ -49,7 +46,7 @@ h1 {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
-  flex-direction: column;
+  margin: auto;
 }
 
 @media only screen and (min-width: 23.4375rem) {
@@ -59,12 +56,12 @@ h1 {
 }
 .freeTrial {
   padding: 2rem;
-  border: #57d1cf solid 0.03125rem;
+  border: hsl(179deg, 57%, 58%) solid 0.03125rem;
   border-radius: 1rem 1rem 0 0;
 }
 .freeTrial h2 {
   margin: 0;
-  color: #c0df34;
+  color: hsl(71deg, 73%, 54%);
   font-weight: 700;
 }
 .freeTrial p {
@@ -77,9 +74,9 @@ h1 {
   }
 }
 .ourOffer {
-  background-color: #2ab2af;
-  flex-direction: column;
-  justify-content: stretch;
+  background-color: hsl(179deg, 62%, 43%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-radius: 0 0 1rem 1rem;
   max-width: 23.4375rem;
   width: 100%;
@@ -88,13 +85,13 @@ h1 {
   padding: 1.5rem;
 }
 .ourOffer h2 {
-  color: #e5eff5;
+  color: hsl(204deg, 43%, 93%);
   font-weight: 700;
   margin: 0;
 }
 .ourOffer p {
   margin: 0;
-  color: #e5eff5;
+  color: hsl(204deg, 43%, 93%);
   align-items: center;
   font-size: 17.6px;
 }
@@ -106,11 +103,11 @@ h1 {
 .ourOffer .period {
   text-align: center;
   font-size: 24px;
-  color: #98a6bd;
+  color: hsl(218deg, 22%, 67%);
 }
 .ourOffer .signUpButton {
   text-align: center;
-  background-color: #c0df34;
+  background-color: hsl(71deg, 73%, 54%);
   width: 100%;
   padding: 0.5rem 0;
   margin-top: 2rem;
@@ -118,10 +115,10 @@ h1 {
 }
 .ourOffer .signUpButton a {
   text-decoration: none;
-  color: #e5eff5;
+  color: hsl(204deg, 43%, 93%);
 }
 .ourOffer .signUpButton:hover, .ourOffer .signUpButton:focus-visible {
-  box-shadow: 0.5rem 0.5rem 0.9375rem #228785, -0.5rem 0.5rem 0.5rem #228785;
+  box-shadow: 0.5rem 0.5rem 0.9375rem hsl(179deg, 60%, 33%), -0.5rem 0.5rem 0.5rem hsl(179deg, 60%, 33%);
 }
 .ourOffer .subscription {
   flex-direction: column;
@@ -132,7 +129,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  background-color: #57d1cf;
+  background-color: hsl(179deg, 57%, 58%);
 }
 .ourOffer .reason ul {
   padding: 1rem 0 0 0;
@@ -140,7 +137,7 @@ h1 {
 }
 .ourOffer .reason ul li {
   list-style: none;
-  color: #e5eff5;
+  color: hsl(204deg, 43%, 93%);
 }
 
 @media only screen and (min-width: 23.4375rem) {
@@ -155,6 +152,4 @@ h1 {
   .ourOffer .signUpButton {
     margin-top: 0;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
