@@ -34,16 +34,11 @@ h1 {
 }
 
 /*layout*/
-.isResponsive {
-  display: flex;
-  flex-shrink: 1;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: 23.4375rem;
   width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   border-radius: 1rem;
   overflow: hidden;
   margin: auto;
@@ -52,6 +47,7 @@ h1 {
 @media only screen and (min-width: 23.4375rem) {
   .container {
     max-width: 56.25rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 .freeTrial {
@@ -75,8 +71,6 @@ h1 {
 }
 .ourOffer {
   background-color: hsl(179deg, 62%, 43%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   border-radius: 0 0 1rem 1rem;
   max-width: 23.4375rem;
   width: 100%;
@@ -92,7 +86,6 @@ h1 {
 .ourOffer p {
   margin: 0;
   color: hsl(204deg, 43%, 93%);
-  align-items: center;
   font-size: 17.6px;
 }
 .ourOffer .price {
@@ -121,13 +114,9 @@ h1 {
   box-shadow: 0.5rem 0.5rem 0.9375rem hsl(179deg, 60%, 33%), -0.5rem 0.5rem 0.5rem hsl(179deg, 60%, 33%);
 }
 .ourOffer .subscription {
-  flex-direction: column;
-  justify-content: space-between;
   width: 100%;
 }
 .ourOffer .reason {
-  flex-direction: column;
-  justify-content: space-between;
   width: 100%;
   background-color: hsl(179deg, 57%, 58%);
 }
@@ -143,7 +132,6 @@ h1 {
 @media only screen and (min-width: 23.4375rem) {
   .ourOffer {
     max-width: 56.25rem;
-    flex-direction: row;
     border-radius: 0;
   }
   .ourOffer div {
