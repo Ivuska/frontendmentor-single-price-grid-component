@@ -38,7 +38,7 @@ h1 {
   max-width: 23.4375rem;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   border-radius: 1rem;
   overflow: hidden;
   margin: auto;
@@ -47,7 +47,8 @@ h1 {
 @media only screen and (min-width: 23.4375rem) {
   .container {
     max-width: 56.25rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
 .freeTrial {
@@ -84,9 +85,14 @@ h1 {
   margin: 0;
 }
 .ourOffer p {
-  margin: 0;
   color: hsl(204deg, 43%, 93%);
   font-size: 17.6px;
+  margin: 0;
+}
+.ourOffer .subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .ourOffer .price {
   font-weight: 700;
@@ -100,24 +106,17 @@ h1 {
 }
 .ourOffer .signUpButton {
   text-align: center;
+  text-decoration: none;
   background-color: hsl(71deg, 73%, 54%);
   width: 100%;
-  padding: 0.5rem 0;
-  margin-top: 2rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
-}
-.ourOffer .signUpButton a {
-  text-decoration: none;
   color: hsl(204deg, 43%, 93%);
 }
 .ourOffer .signUpButton:hover, .ourOffer .signUpButton:focus-visible {
   box-shadow: 0.5rem 0.5rem 0.9375rem hsl(179deg, 60%, 33%), -0.5rem 0.5rem 0.5rem hsl(179deg, 60%, 33%);
 }
-.ourOffer .subscription {
-  width: 100%;
-}
 .ourOffer .reason {
-  width: 100%;
   background-color: hsl(179deg, 57%, 58%);
 }
 .ourOffer .reason ul {
@@ -133,11 +132,13 @@ h1 {
   .ourOffer {
     max-width: 56.25rem;
     border-radius: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    width: 100%;
   }
   .ourOffer div {
     padding: 3rem;
-  }
-  .ourOffer .signUpButton {
-    margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
