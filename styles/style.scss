@@ -60,6 +60,8 @@ body {
 
 h1 {
   color: $cyanColor;
+  margin-top: 0;
+  font-weight: $weight-bold;
 }
 
 /*layout*/
@@ -68,51 +70,60 @@ h1 {
   max-width: toRem(375);
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
   border-radius: $radius;
   overflow: hidden;
   margin: auto;
-}
 
-@media only screen and (min-width: $desktopLayout) {
-  .container {
+  @media only screen and (min-width: $desktopLayout) {
     max-width: toRem(900);
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 }
 
+
 .freeTrial {
-  padding: toRem(32);
+  padding: toRem(24);
   border: $lightCyanColor solid toRem(0.5);
   border-radius: $radius $radius 0 0;
+
+  @media only screen and (min-width: $desktopLayout) {
+    padding: toRem(48) toRem(48) 0 toRem(48);
+    grid-column: 1 / 3;
+  }
   h2 {
     margin: 0;
     color:$yellowColor;
-    font-weight: $weight-bold;
+    font-weight: $weight-normal;
+
+    @media only screen and (min-width: $desktopLayout) {
+      margin: toRem(24) 0;
+    }
   }
   p {
     color: $grayTextColor;
+
+    @media only screen and (min-width: $desktopLayout) {
+      font-size: $base-font-size*1.5;
+    }
   }
 }
 
-@media only screen and (min-width: $desktopLayout) {
-  .freeTrial {
-    padding: toRem(48);
-  }
-}
-
-.ourOffer {
-  background-color: $cyanColor;
-  border-radius: 0 0 $radius $radius;
+.subscription,
+.reason { 
   max-width: toRem(375);
+  padding: toRem(24);
   width:100%;
-  div {
-    padding: toRem(24);
+
+  @media only screen and (min-width: $desktopLayout) {
+    max-width: unset;
+    padding: toRem(48);
   }
   h2 {
     color: $whiteTextColor;
-    font-weight: $weight-bold;
+    font-weight: $weight-normal;
     margin: 0;
   }
   p {
@@ -120,11 +131,13 @@ h1 {
     font-size: $base-font-size*1.1;
     margin: 0;
   }
-  .subscription {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $cyanColor;
   .price {
     font-weight: $weight-bold;
     font-size: $base-font-size*2;
@@ -149,30 +162,16 @@ h1 {
                   toRem(-8) toRem(8) toRem(8) $boxShadowCyanColor;
     }
   }
-  .reason {
-    background-color: $lightCyanColor;
-    ul {
-      padding: toRem(16) 0 0 0;
-      margin: 0;
-    }
-    ul li {
-      list-style: none;
-      color: $whiteTextColor;
+}
+
+.reason {
+  background-color: $lightCyanColor;
+  ul {
+    padding: toRem(16) 0 0 0;
+    margin: 0;
+    li {
+    list-style: none;
+    color: $whiteTextColor;
     }
   }
 }
-
-@media only screen and (min-width: $desktopLayout) {
-  .ourOffer {
-    max-width: toRem(900);
-    border-radius: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-auto-flow: row;
-    width: 100%;
-    div {
-      padding: toRem(48);
-    }
-  }
-}  
