@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repository on GitHub](https://github.com/Ivuska/frontendmentor-single-price-grid-component)
-- Live Site URL: [Live grid component](https://ivuska.github.io/frontendmentor-single-price-grid-component/)
+- Live Site URL: [Live grid component](https://ifischerova.github.io/frontendmentor-single-price-grid-component/)
 
 ## My process
 
